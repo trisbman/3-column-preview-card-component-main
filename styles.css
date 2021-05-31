@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-gray);
+}
+
+:root {
+  --primary-font: "Lexend Deca";
+  --secondary-font: "Big Shoulders Display";
+  --color-gray: hsl(0, 0%, 95%);
+  --color-orange: hsl(31, 77%, 52%);
+  --color-blue: hsl(184, 100%, 22%);
+  --color-black: hsl(179, 100%, 13%);
+}
+
+.fillY {
+  height: 100vh;
+}
+.fillX {
+  width: 100vw;
+}
+
+body {
+  background: var(--color-gray);
+  display: grid;
+  padding: 50px 20px;
+}
+
+.container {
+  height: 70vh;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  border-radius: 10px;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+}
+
+.container > div {
+  display: grid;
+  grid-template-rows: 25% 15% 30% 30%;
+  font-family: var(--primary-font);
+  padding: 60px;
+  padding-top: 15px;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  font-size: 50px;
+}
+p {
+  font-size: 17px;
+
+  line-height: 30px;
+}
+img {
+  align-self: center;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 60px;
+  width: 70%;
+  min-width: 200px;
+  font-size: 17px;
+  padding: 16px;
+  align-self: flex-end;
+  font-family: var(--primary-font);
+}
+
+.card-1 {
+  background: var(--color-orange);
+}
+
+.card-2 {
+  background: var(--color-blue);
+}
+
+.card-3 {
+  background: var(--color-black);
+}
+
+.card-1 > button {
+  color: var(--color-orange);
+}
+
+.card-2 > button {
+  color: var(--color-blue);
+}
+.card-3 > button {
+  color: var(--color-black);
+}
+
+@media screen and (max-width: 1024px) and (min-height: 1440px) {
+  .container {
+    grid-template-rows: repeat(3, 33.33%);
+    grid-template-columns: 100%;
+    height: 85vh;
+    width: 85vw;
+  }
+  h1,
+  p,
+  button,
+  img {
+    margin: 0 50px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  p {
+    font-size: 12px;
+  }
+  button {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        min-width: 376px;
+        min-height: 1368px;
+        padding: 40px 20px;
+    }
+    .container {
+      grid-template-rows: repeat(3, 400px);
+      grid-template-columns: 100%;
+      min-height: 1200px;
+      width: fit-content;
+      max-width: 400px;
+    }
+    .container > div {
+        grid-template-rows: 80px 100px 100px 80px;
+        padding: 30px;
+        padding-top: 15px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 18px;  
+      align-self: flex-end;    
+    }
+    button {
+        font-size: 12px;
+        width: 50%;
+        max-width: 200px;
+        padding: 10px;
+    }
+  }
+}
