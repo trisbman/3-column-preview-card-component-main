@@ -29,6 +29,7 @@ body {
 
 .container {
   height: 70vh;
+  max-height: 600px;
   width: 75vw;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
@@ -42,7 +43,7 @@ body {
   display: grid;
   grid-template-rows: 25% 15% 30% 30%;
   font-family: var(--primary-font);
-  padding: 60px;
+  padding: 50px;
   padding-top: 15px;
 }
 
@@ -61,14 +62,30 @@ img {
 }
 button {
   cursor: pointer;
-  border: none;
+  border: solid 2px transparent;
   border-radius: 60px;
   width: 70%;
-  min-width: 200px;
+  min-width: 150px;
   font-size: 17px;
   padding: 16px;
   align-self: flex-end;
   font-family: var(--primary-font);
+}
+.card-1 > button {
+  color: var(--color-orange);
+}
+
+.card-2 > button {
+  color: var(--color-blue);
+}
+.card-3 > button {
+  color: var(--color-black);
+}
+
+button:hover {
+    border: solid 2px white;
+    background-color: transparent;
+    color: white
 }
 
 .card-1 {
@@ -83,16 +100,6 @@ button {
   background: var(--color-black);
 }
 
-.card-1 > button {
-  color: var(--color-orange);
-}
-
-.card-2 > button {
-  color: var(--color-blue);
-}
-.card-3 > button {
-  color: var(--color-black);
-}
 
 @media screen and (max-width: 1024px) and (min-height: 1440px) {
   .container {
@@ -132,22 +139,22 @@ button {
       max-width: 400px;
     }
     .container > div {
-        grid-template-rows: 80px 100px 100px 80px;
-        padding: 30px;
-        padding-top: 15px;
+        grid-template-rows: 80px 100px 110px 80px;
     }
     h1 {
       font-size: 35px;
+      align-self: center;
     }
     p {
-      font-size: 18px;  
-      align-self: flex-end;    
+      font-size: 15px;  
+      align-self: flex-start;   
     }
     button {
         font-size: 12px;
         width: 50%;
         max-width: 200px;
         padding: 10px;
+        margin-bottom: 20px;
     }
   }
 }
