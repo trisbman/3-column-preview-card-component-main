@@ -83,9 +83,9 @@ button {
 }
 
 button:hover {
-    border: solid 2px white;
-    background-color: transparent;
-    color: white
+  border: solid 2px white;
+  background-color: transparent;
+  color: white;
 }
 
 .card-1 {
@@ -99,7 +99,6 @@ button:hover {
 .card-3 {
   background: var(--color-black);
 }
-
 
 @media screen and (max-width: 1024px) and (min-height: 1440px) {
   .container {
@@ -126,35 +125,36 @@ button:hover {
 }
 
 @media screen and (max-width: 1024px) {
-    body {
-        min-width: 376px;
-        min-height: 1368px;
-        padding: 40px 20px;
-    }
-    .container {
-      grid-template-rows: repeat(3, 400px);
-      grid-template-columns: 100%;
-      min-height: 1200px;
-      width: fit-content;
-      max-width: 400px;
-    }
-    .container > div {
-        grid-template-rows: 80px 100px 110px 80px;
-    }
-    h1 {
-      font-size: 35px;
-      align-self: center;
-    }
-    p {
-      font-size: 15px;  
-      align-self: flex-start;   
-    }
-    button {
-        font-size: 12px;
-        width: 50%;
-        max-width: 200px;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
+  body {
+    min-width: 376px;
+    min-height: 1368px;
+    padding: 40px 20px;
+  }
+  .container {
+    grid-template-rows: repeat(3, 400px);
+    grid-template-columns: 100%;
+    min-height: 1200px;
+    width: fit-content;
+    max-width: 400px;
+  }
+  .container > div {
+    grid-template-rows: 80px 60px 145px 80px;
+    text-align: justify;
+  }
+  h1 {
+    font-size: 35px;
+    align-self: center;
+  }
+  p {
+    font-size: 15px;
+    align-self: flex-start;
+  }
+  button {
+    font-size: 12px;
+    width: 50%;
+    max-width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: flex-end;
   }
 }
