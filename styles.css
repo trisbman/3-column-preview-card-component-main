@@ -139,7 +139,7 @@ button:hover {
   }
   .container > div {
     grid-template-rows: 80px 60px 145px 80px;
-    text-align: justify;
+    text-align: left;
   }
   h1 {
     font-size: 35px;
